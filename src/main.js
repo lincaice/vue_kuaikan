@@ -1,8 +1,11 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
-
+import './assets/iconfont/iconfont.css'
 Vue.config.productionTip = false
+import axios from 'axios';
+axios.defaults.baseURL = '/api';
+Vue.prototype.$axios = axios                                                                                           
 
 new Vue({
   router,
