@@ -184,15 +184,18 @@ export default {
     stopScroll() {
       if (this.$scroll) {
         clearInterval(this.$scroll);
+        this.$scroll = undefined;
       }
     },
     handleVisiable(e) {
       switch (e.target.visibilityState) {
         case "hidden":
-          this.stopScroll();
+            this.stopScroll();
           break;
         case "visible":
-          this.openScroll();
+          if (!this.$scroll) {
+            this.openScroll();
+          }
           break;
       }
     },

@@ -5,7 +5,7 @@
       <h3>{{discoveryLike.title}}</h3>
     </div>
     <div class="discovery-inner-box">
-      <div v-for="item in discoveryLike.topics" :key="item.id">
+      <div class="like-item-box" v-for="item in discoveryLike.topics" :key="item.id">
         <CartoonTagItem :length='2' :cartoonInfo='item' author type='small'></CartoonTagItem>
       </div>
     </div>
@@ -46,6 +46,9 @@ export default {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    .like-item-box{
+      margin-bottom: 16px;
+    }
   }
 }
 </style>

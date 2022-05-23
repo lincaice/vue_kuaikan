@@ -4,12 +4,15 @@
     <div>
       <router-view></router-view>
     </div>
+    <LookFooter></LookFooter>
   </div>
 </template>
 
 <script>
+// 头部
 import LookHeader from '@/components/main/LookHeader.vue'
-
+// 尾部
+import LookFooter from '@/components/main/LookFooter'
 export default {
   name: 'Home',
   data() {
@@ -17,7 +20,7 @@ export default {
       
     }
   },
-  components:{LookHeader},
+  components:{LookHeader,LookFooter},
   methods: {
     
   },

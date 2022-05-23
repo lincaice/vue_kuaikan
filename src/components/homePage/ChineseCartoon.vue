@@ -16,11 +16,11 @@
         @mouseleave="detailShow = 1"
       >
         <!-- 详情显示/相对于覆盖后的盒子显示 -->
-        <div class="chinese-detail-box" v-if="detailShow === number+1">
+        <div class="chinese-detail-box" v-if="detailShow === number+1" >
           <!-- 漫画图片盒子 -->
           <a href="javaScript:;" class="img-box">
             <img :src="item.vertical_image_url" class="detail-img" />
-            <div class="number-show">{{number+1}}</div>
+            <div class="number-show" :class="number < 3 ?'tag-color':''">{{number+1}}</div>
           </a>
           <!-- 详情介绍盒子 -->
           <div class="detail-info-box">
@@ -33,6 +33,7 @@
               <span
                 v-for="(itemTag,id) in item.tags.length > 3 ? item.tags.slice(0,3) :item.tags"
                 :key="id"
+
               >{{itemTag}}</span>
             </div>
             <!-- 详情介绍 -->
@@ -197,7 +198,7 @@ export default {
           }
           // 详情介绍
           .detail-intro {
-            height: 40px;
+            height: 36px;
             width: 100%;
             // 多行省略效果
             overflow: hidden;
@@ -235,5 +236,9 @@ export default {
 
 .top-color {
   color: #f5a623 !important;
+}
+
+.tag-color {
+  background-color: #f5a623 !important;
 }
 </style>

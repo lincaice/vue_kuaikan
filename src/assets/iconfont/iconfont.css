@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 3346120 */
-  src: url('iconfont.woff2?t=1651156922757') format('woff2'),
-       url('iconfont.woff?t=1651156922757') format('woff'),
-       url('iconfont.ttf?t=1651156922757') format('truetype');
+  src: url('iconfont.woff2?t=1653110923306') format('woff2'),
+       url('iconfont.woff?t=1653110923306') format('woff'),
+       url('iconfont.ttf?t=1653110923306') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,14 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-zuo:before {
+  content: "\e632";
+}
+
+.icon-you:before {
+  content: "\e633";
 }
 
 .icon-dianzan_huaban:before {
